@@ -1,27 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
     border: none;
     margin: 0;
     padding: 0;
-    font-weight: unset;
-    font-size: unset;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit;
+    font-family: "Open Sans", sans-serif;
     outline: none;
     box-sizing: border-box;
 }
 
 :root {
+    --font-xxxlarge: 27px;
+    --font-xxlarge: 24px;
     --font-xlarge: 21px;
     --font-large: 18px;
     --font-medium: 15px;
     --font-small: 13px;
     --font-xsmall: 11px;
 
+    --weight-bold: 700;
+    --weight-medium: 500;
+    --weight-light: 300;
+
     --dark-gray: #303030;
-    --blue-black: #11111F;
+    --blue-black: #0D0D1F;
+    --deep-blue-black: #0A0A0F;
+
+    --perfil-img-dimen: 200px;
+
+    font-size: var(--font-medium);
+    font-weight: var(--weight-medium);
 }
 
 body {
-    max-width: 100vw;
-    max-height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     background-color: var(--dark-gray);
@@ -30,6 +46,66 @@ body {
 .page-content {
     width: 100%;
     max-width: 900px;
-    height: 100vh;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    "main aside";
+}
+
+main {
     background-color: var(--blue-black);
 }
+
+aside {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 15px;
+    background-color: var(--deep-blue-black);
+    color: white;
+}
+
+.perfil-img-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.perfil-img {
+    width: var(--perfil-img-dimen);
+    height: var(--perfil-img-dimen);
+    border-radius: 100%;
+    border: 3px solid white;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-name {
+    font-size: var(--font-xxxlarge);
+    font-weight: var(--weight-bold);
+}
+
+.contact-info-container {
+    display: flex;    
+    flex-direction: column;
+    gap: 15px;
+    font-size: var(--font-small);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info-tag {
+    font-weight: var(--weight-bold);
+}
+
+
