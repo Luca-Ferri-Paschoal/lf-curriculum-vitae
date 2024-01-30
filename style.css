@@ -1,0 +1,35 @@
+* {
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-weight: unset;
+    font-size: unset;
+    outline: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-xlarge: 21px;
+    --font-large: 18px;
+    --font-medium: 15px;
+    --font-small: 13px;
+    --font-xsmall: 11px;
+
+    --dark-gray: #303030;
+    --blue-black: #11111F;
+}
+
+body {
+    max-width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark-gray);
+}
+
+.page-content {
+    width: 100%;
+    max-width: 900px;
+    height: 100vh;
+    background-color: var(--blue-black);
+}
